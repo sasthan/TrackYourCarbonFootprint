@@ -29,7 +29,7 @@ def verify_hashes(password, hashed_text):
 
 feature_names_best = ['age', 'sex', 'steroid', 'antivirals', 'fatigue', 'spiders', 'ascites','varices', 'bilirubin', 'alk_phosphate', 'sgot', 'albumin', 'protime','histology']
 
-gender_dict = {"Miles/Tons (US)":1,"Kilometers/ tonnes (metric)":2}
+gender_dict = {"Miles":1,"Kilometers":2}
 feature_dict = {"No":1,"Yes":2}
 transportmodel_dict = {"Rail":1,"Ship":2, "Air":3, "Truck":4, "Car":5}
 carrier_dict = {"DHL":1,"UPS":2, "USPS":3, "Fedex":4}
@@ -73,8 +73,8 @@ prescriptive_message_temp ="""
 		<ul>
 		<li style="text-align:justify;color:black;padding:10px">By not selecting same-day delivery you could reduce your CO2e emissions by an estimated 0.8 tons </li>
 		<li style="text-align:justify;color:black;padding:10px">Can use eco-friendly packaging</li>
-		<li style="text-align:justify;color:black;padding:10px">Overall Carbon footprint score is euivalent to 1 car off the road for 1 hour</li>
-		<li style="text-align:justify;color:black;padding:10px">Overall Carbon footprint score is euivalent to 1 tree planted today</li>
+		<li style="text-align:justify;color:black;padding:10px">Overall Carbon footprint score is equivalent to 1 car off the road for 1 hour</li>
+		<li style="text-align:justify;color:black;padding:10px">Overall Carbon footprint score is eqstreamlit run app.pyuivalent to 1 tree planted today</li>
 		<li style="text-align:justify;color:black;padding:10px">Use refurbuished items instead of new</li>
 		<ul>
 	</div>
@@ -186,7 +186,7 @@ def main():
                     # prediction_label = {"Die":1,"Live":2}
                     # final_result = get_key(prediction,prediction_label)
                     #if prediction == 1:
-                    if sex == "Miles/Tons (US)":
+                    if sex == "Miles":
                         st.warning("You have significant carbon footprint results")
                         #pred_probability_score = {"Performance Score impact": pred_prob[0][0] * 100, "Overall Performance score": pred_prob[0][1] * 100}
                         if(steroid == 'Car'):
